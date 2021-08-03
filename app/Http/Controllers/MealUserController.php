@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\Allergy\AllergyResource;
-use App\Models\Allergies;
+use App\Models\MealUser;
 use Illuminate\Http\Request;
 
-class AllergiesController extends Controller
+class MealUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,6 @@ class AllergiesController extends Controller
     public function index()
     {
         //
-
-        return allergies::all();
     }
 
     /**
@@ -44,24 +41,21 @@ class AllergiesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Allergies  $allergies
+     * @param  \App\MealUser  $mealUser
      * @return \Illuminate\Http\Response
      */
-    public function show(Allergies $allergies)
+    public function show(MealUser $mealUser)
     {
         //
-        return $allergies;
-
-        return new AllergyResource($allergies);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Allergies  $allergies
+     * @param  \App\MealUser  $mealUser
      * @return \Illuminate\Http\Response
      */
-    public function edit(Allergies $allergies)
+    public function edit(MealUser $mealUser)
     {
         //
     }
@@ -70,10 +64,10 @@ class AllergiesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Allergies  $allergies
+     * @param  \App\MealUser  $mealUser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Allergies $allergies)
+    public function update(Request $request, MealUser $mealUser)
     {
         //
     }
@@ -81,10 +75,10 @@ class AllergiesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Allergies  $allergies
+     * @param  \App\MealUser  $mealUser
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Allergies $allergies)
+    public function destroy(MealUser $mealUser)
     {
         //
     }
