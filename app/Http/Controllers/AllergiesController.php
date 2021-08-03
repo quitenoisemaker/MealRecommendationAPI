@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Allergy\AllergyCollection;
 use App\Http\Resources\Allergy\AllergyResource;
 use App\Models\Allergies;
+use App\Models\Meal;
 use Illuminate\Http\Request;
 
 class AllergiesController extends Controller
@@ -17,7 +19,8 @@ class AllergiesController extends Controller
     {
         //
 
-        return allergies::all();
+        // return allergies::all();
+        return AllergyResource::collection(allergies::all());
     }
 
     /**
@@ -47,12 +50,12 @@ class AllergiesController extends Controller
      * @param  \App\Allergies  $allergies
      * @return \Illuminate\Http\Response
      */
-    public function show(Allergies $allergies)
+    public function show(Allergies $allergy)
     {
-        //
-        return $allergies;
+        // //
+        // return $allergy;
 
-        return new AllergyResource($allergies);
+        return new AllergyResource($allergy);
     }
 
     /**

@@ -14,6 +14,12 @@ class AllergyCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+
+            'name' => $this->name
+            // 'Allergy Category' => [
+            //     'name' => route('meals.show', $this->id)
+            // ]
+        ];
     }
 }
