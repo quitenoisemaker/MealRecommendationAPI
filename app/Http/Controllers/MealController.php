@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Allergy\MealResource;
+use App\Models\Allergies;
 use App\Models\Meal;
 use Illuminate\Http\Request;
 
@@ -12,9 +14,19 @@ class MealController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Allergies $allergies)
     {
+        return MealResource::collection($allergies->meals);
         //
+
+        // return Meal::all();
+    }
+
+    public function allMeal()
+    {
+
+
+        return Meal::all();
     }
 
     /**

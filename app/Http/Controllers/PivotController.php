@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\Allergy\MealUserResource;
-use App\Models\MealUser;
+use App\Models\Pivot;
 use Illuminate\Http\Request;
 
-class MealUserController extends Controller
+class PivotController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class MealUserController extends Controller
      */
     public function index()
     {
-        // 
-
-        return MealUser::all();
+        //
     }
 
     /**
@@ -39,30 +36,26 @@ class MealUserController extends Controller
     public function store(Request $request)
     {
         //
-
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\MealUser  $mealUser
+     * @param  \App\Pivot  $pivot
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pivot $pivot)
     {
         //
-        $user = MealUser::find($id);
-        return new MealUserResource($user);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\MealUser  $mealUser
+     * @param  \App\Pivot  $pivot
      * @return \Illuminate\Http\Response
      */
-    public function edit(MealUser $mealUser)
+    public function edit(Pivot $pivot)
     {
         //
     }
@@ -71,10 +64,10 @@ class MealUserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\MealUser  $mealUser
+     * @param  \App\Pivot  $pivot
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MealUser $mealUser)
+    public function update(Request $request, Pivot $pivot)
     {
         //
     }
@@ -82,10 +75,10 @@ class MealUserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\MealUser  $mealUser
+     * @param  \App\Pivot  $pivot
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MealUser $mealUser)
+    public function destroy(Pivot $pivot)
     {
         //
     }

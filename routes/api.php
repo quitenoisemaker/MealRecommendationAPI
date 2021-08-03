@@ -20,9 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/allergies', AllergiesController::class);
+Route::apiResource('/allergy', AllergiesController::class);
 
-Route::group(['prefix' => 'allergies'], function () {
+Route::get('/allmeals', 'MealController@allMeal');
 
+Route::group(['prefix' => 'allergy'], function () {
     Route::apiResource('/{allergies}/meals', MealController::class);
+    Route::get('/user/{id}', 'MealUserController@show');
 });

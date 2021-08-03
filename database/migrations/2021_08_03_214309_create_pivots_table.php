@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMealUsersTable extends Migration
+class CreatePivotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateMealUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('meal_users', function (Blueprint $table) {
+        Schema::create('pivots', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateMealUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meal_users');
+        Schema::dropIfExists('pivots');
     }
 }

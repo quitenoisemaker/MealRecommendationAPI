@@ -55,7 +55,7 @@ class AllergiesController extends Controller
         // //
         // return $allergy;
 
-        return new AllergyResource($allergy);
+        // return new AllergyResource($allergy);
     }
 
     /**
