@@ -19,7 +19,7 @@ class MealUserResource extends JsonResource
         return [
             'name' => $this->name,
             'Email' => $this->email,
-            'Allergy' => AllergyResource::collection(allergies::all())
+            'Allergies' => AllergyResource::collection(allergies::all())
         ];
     }
 }

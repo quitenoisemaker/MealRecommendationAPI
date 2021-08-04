@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Allergy\AllUserResource;
 use App\Http\Resources\Allergy\MealUserResource;
 use App\Models\MealUser;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class MealUserController extends Controller
     {
         // 
 
-        return MealUser::all();
+        return AllUserResource::collection(MealUser::all());
     }
 
     /**

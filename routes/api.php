@@ -24,6 +24,8 @@ Route::apiResource('/allergy', AllergiesController::class);
 
 Route::get('/allmeals', 'MealController@allMeal');
 
+Route::get('/users', 'MealUserController@index');
+
 Route::group(['prefix' => 'allergy'], function () {
     Route::apiResource('/{allergies}/meals', MealController::class);
     Route::get('/user/{id}', 'MealUserController@show');
