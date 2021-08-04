@@ -17,7 +17,6 @@ class AllergyResource extends JsonResource
         return [
 
             // 'name' => $this->name
-
             $this->name => route('meals.index', $this->id)
 
         ];

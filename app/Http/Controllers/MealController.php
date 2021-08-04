@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Allergy\AllMealResource;
 use App\Http\Resources\Allergy\MealResource;
 use App\Models\Allergies;
 use App\Models\Meal;
@@ -24,9 +25,7 @@ class MealController extends Controller
 
     public function allMeal()
     {
-
-
-        return Meal::all();
+        return AllMealResource::collection(Meal::all());
     }
 
     /**

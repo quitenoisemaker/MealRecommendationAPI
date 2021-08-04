@@ -15,6 +15,6 @@ class MealUser extends Model
     public function Mealallergy()
     {
 
-        return $this->hasMany(Allergies::class);
+        return $this->belongsToMany(Allergies::class);
     }
 }

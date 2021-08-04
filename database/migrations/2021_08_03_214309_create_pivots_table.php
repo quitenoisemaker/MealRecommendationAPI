@@ -15,6 +15,8 @@ class CreatePivotsTable extends Migration
     {
         Schema::create('pivots', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->integer('allergy_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }

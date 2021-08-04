@@ -16,7 +16,7 @@ class AllergyCollection extends ResourceCollection
     {
         return [
 
-            'name' => $this->name
+            'name' => $this->name,
             // 'Allergy Category' => [
             //     'name' => route('meals.show', $this->id)
             // ]

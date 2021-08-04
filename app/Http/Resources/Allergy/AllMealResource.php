@@ -2,11 +2,10 @@
 
 namespace App\Http\Resources\Allergy;
 
-use App\Models\Allergies;
-use App\Http\Resources\Allergy\AllergyResource;
+use App\Models\Meal;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class MealUserResource extends JsonResource
+class AllMealResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,10 +15,13 @@ class MealUserResource extends JsonResource
      */
     public function toArray($request)
     {
+        $id = $this->allergies_id;
         return [
-            'name' => $this->name,
-            'Email' => $this->email,
-            'Allergy' => AllergyResource::collection(allergies::all())
+            'Allergy' => Meal::find($id)->allergy->name,
+            'Main Meal' => $this->main_item,
+            'Side Meal 1' => $this->side_item1,
+            'Side Meal 2' => $this->side_item2,
+
         ];
     }
 }

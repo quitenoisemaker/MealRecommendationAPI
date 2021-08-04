@@ -17,6 +17,12 @@ class Allergies extends Model
     public function meals()
     {
 
-        return $this->hasMany(Meal::class);
+        return $this->hasMany(Meal::class, 'allergies_id');
+    }
+
+    public function MealUsers()
+    {
+
+        return $this->belongsToMany(MealUser::class);
     }
 }
