@@ -20,13 +20,15 @@ class MealController extends Controller
         return MealResource::collection($allergies->meals);
         //
 
-        // return Meal::all();
     }
 
+
+    //function to get all Meal
     public function allMeal()
     {
         return AllMealResource::collection(Meal::all());
     }
+    //end
 
     /**
      * Show the form for creating a new resource.

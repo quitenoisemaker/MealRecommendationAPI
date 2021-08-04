@@ -16,9 +16,6 @@ class MealResource extends JsonResource
     public function toArray($request)
     {
         return [
-
-            // 'Allergy' => $this->allergies_id->Meal::find(2)->allergy,
-
             'Main meal' => $this->main_item,
             'Side meal' => $this->side_item1,
             'Side meal2' => $this->side_item2

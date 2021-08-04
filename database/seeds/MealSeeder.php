@@ -13,10 +13,7 @@ class MealSeeder extends Seeder
      */
     public function run()
     {
-        //
-        // \App\Models\Meal::factory(50)->create();
+
         factory(Meal::class, 50)->create();
-        // $allergy = Allergies::get();
-        // dd($allergy);
     }
 }

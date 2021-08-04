@@ -15,15 +15,9 @@ $factory->define(Meal::class, function () {
     $faker->addProvider(new \FakerRestaurant\Provider\en_US\Restaurant($faker));
     return [
         //
-
-
-
-
         'allergies_id' => function () {
             return Allergies::all()->random();
         },
-
-
 
         'main_item' => $faker->foodName(),
         'side_item1' => $faker->vegetableName(),

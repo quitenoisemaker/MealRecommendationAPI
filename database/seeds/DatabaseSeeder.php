@@ -13,9 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
-        // \App\Models\Meal::factory(50)->create();
-        //$this->call(AllergiesSeeder::class);
+
         $this->call(MealSeeder::class);
     }
 }

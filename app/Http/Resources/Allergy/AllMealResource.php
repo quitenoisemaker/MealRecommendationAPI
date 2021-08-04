@@ -15,6 +15,8 @@ class AllMealResource extends JsonResource
      */
     public function toArray($request)
     {
+
+        //Getting the Allergies ID
         $id = $this->allergies_id;
         return [
             'Allergy' => Meal::find($id)->allergy->name,

@@ -18,8 +18,6 @@ class AllergiesController extends Controller
     public function index()
     {
         //
-
-        // return allergies::all();
         return AllergyResource::collection(allergies::all());
     }
 
@@ -53,9 +51,7 @@ class AllergiesController extends Controller
     public function show(Allergies $allergy)
     {
         // //
-        // return $allergy;
 
-        // return new AllergyResource($allergy);
     }
 
     /**
