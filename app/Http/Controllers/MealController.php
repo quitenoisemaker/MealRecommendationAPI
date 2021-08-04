@@ -26,7 +26,7 @@ class MealController extends Controller
     //function to get all Meal
     public function allMeal()
     {
-        return AllMealResource::collection(Meal::all());
+        return AllMealResource::collection(Meal::paginate(10));
     }
     //end
 
