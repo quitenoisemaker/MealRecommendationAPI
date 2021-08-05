@@ -25,7 +25,7 @@ The system recommend meals according to the allergy picked by a user. The meals 
 <img src="image/user.png">
 </div>
 <div>
-<img src="image/recommendation.png">
+<img src="image/recomendation.png">
 </div>
 <li>Fetch meal recommendations for more than one user at a time ...</li>
 <div>
