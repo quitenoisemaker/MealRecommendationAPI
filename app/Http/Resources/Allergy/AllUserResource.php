@@ -21,7 +21,7 @@ class AllUserResource extends JsonResource
         return [
             'Name' => $this->name,
             'Email' => $this->email,
-            'Allergy' => AllergyResource::collection(MealUser::find($id)->Mealallergy)
+            'Selected Allergy' => AllergyResource::collection(MealUser::find($id)->Mealallergy)
         ];
     }
 }
