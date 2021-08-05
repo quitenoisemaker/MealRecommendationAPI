@@ -6,6 +6,8 @@ use App\Http\Resources\Allergy\AllUserResource;
 use App\Http\Resources\Allergy\MealUserResource;
 use App\Models\MealUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+
 
 class MealUserController extends Controller
 {
@@ -18,7 +20,13 @@ class MealUserController extends Controller
     {
         // 
 
-        return AllUserResource::collection(MealUser::all());
+        // return AllUserResource::collection(MealUser::all());
+
+        $value = Cache::rememberForever('users', function () {
+            return AllUserResource::collection(MealUser::all());
+        });
+
+        return $value;
     }
 
     /**

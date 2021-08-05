@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\Allergy\AllMealResource;
 use App\Http\Resources\Allergy\MealResource;
+use Illuminate\Support\Facades\Cache;
 use App\Models\Allergies;
 use App\Models\Meal;
 use Illuminate\Http\Request;
+
 
 class MealController extends Controller
 {
@@ -17,16 +19,30 @@ class MealController extends Controller
      */
     public function index(Allergies $allergies)
     {
-        return MealResource::collection($allergies->meals);
-        //
 
+        //
+        return MealResource::collection($allergies->meals);
+
+
+        // $meal = Cache::rememberForever('meal', function () {
+
+        //     return MealResource::collection($this->allergies->meals);
+        // });
+
+        // return $meal;
     }
 
 
     //function to get all Meal
     public function allMeal()
     {
-        return AllMealResource::collection(Meal::paginate(10));
+
+
+        $value = Cache::rememberForever('allmeals', function () {
+            return AllMealResource::collection(Meal::paginate(10));
+        });
+
+        return $value;
     }
     //end
 
