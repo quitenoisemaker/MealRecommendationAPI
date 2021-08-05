@@ -16,17 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::apiResource('/allergy', AllergiesController::class);
 
 Route::get('/allmeals', 'MealController@allMeal');
 
-Route::get('/users', 'MealUserController@index');
+Route::group(['postfix' => 'allergy'], function () {
+    Route::get('/users/allergy', 'MealUserController@index');
+    Route::get('/user/{id}/allergy', 'MealUserController@show');
+});
 
 Route::group(['prefix' => 'allergy'], function () {
     Route::apiResource('/{allergies}/meals', MealController::class);
-    Route::get('/user/{id}', 'MealUserController@show');
 });
