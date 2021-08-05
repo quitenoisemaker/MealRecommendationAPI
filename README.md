@@ -17,18 +17,18 @@ The system recommend meals according to the allergy picked by a user. The meals 
 <p>Different Endpoint was created for each task.</p>
 <p>Start by Migrating Tables to your database and run Seeder for Fake Meals (you can as well insert your different meals by inserting on the Meal Table). Insert the different allergy on the Allergy table and also insert users on the MealUser Table</p>
 <ul>
-<li>Fetch all meals with their Allergy ...</li>
+<li>Fetch all meals with their Allergy <a href="https://mealrecommendation.herokuapp.com/api/allmeals">https://mealrecommendation.herokuapp.com/api/allmeals</a></li>
 <div>
 <img src="image/allmeal.png">
 </div>
-<li>User to select Allergy and get meal recommendation ...</li>
+<li>User to select Allergy and get meal recommendation <a href="https://mealrecommendation.herokuapp.com/api/user/1/allergy">https://mealrecommendation.herokuapp.com/api/user/1/allergy</a> <b>NOTE: You can change the user_id ranging from 1-10 to see different user</b></li>
 <div>
 <img src="image/user.png">
 </div>
 <div>
 <img src="image/recomendation.png">
 </div>
-<li>Fetch meal recommendations for more than one user at a time ...</li>
+<li>Fetch meal recommendations for more than one user at a time <a href="https://mealrecommendation.herokuapp.com/api/users/allergy">https://mealrecommendation.herokuapp.com/api/users/allergy</a> <b>Hint: Users and their different allergy </b></li>
 <div>
 <img src="image/selected.png">
 </div>
