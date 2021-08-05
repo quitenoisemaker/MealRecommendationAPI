@@ -15,7 +15,7 @@ The system recommend meals according to the allergy picked by a user. The meals 
 
 <h4>How to use the API</h4>
 <p>Different Endpoint was created for each task.</p>
-<p>Start by Migrating Tables to your database and run Seeder for Fake Meals (you can as well insert your different meals by inserting on the Meal Table). Insert the different allergy on the Allergy table and also insert users on the MealUser Table</p>
+<p>Start by Migrating Tables to your database and run Seeder for Fake Meals (you can as well insert your different meals on the Meal Table). Insert the different allergy on the Allergy table and also insert users on the MealUser Table</p>
 <ul>
 <li>Fetch all meals with their Allergy. <br> <a href="https://mealrecommendation.herokuapp.com/api/allmeals">https://mealrecommendation.herokuapp.com/api/allmeals</a></li><br> 
 <div>
