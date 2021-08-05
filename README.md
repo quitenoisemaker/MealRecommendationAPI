@@ -1,4 +1,4 @@
-<h3>Meal Recommendation System REST API</h3>
+<h2>Meal Recommendation System REST API</h2>
 <p>Here is a Meal Recommendation System REST API that operate on three Allergies</p>
 <ul>
 <li>Nut Allergy</li>
@@ -13,7 +13,7 @@ The system recommend meals according to the allergy picked by a user. The meals 
 </p>
 <p>Laravel was use in this project because is a comprehensive framework suitable for any kind of web development, is logically structured, and enjoys strong community support.</>
 
-<h4>How to use the API</h4>
+<h3>How to use the API</h3>
 <p>Different Endpoint was created for each task.</p>
 <p>Start by Migrating Tables to your database and run Seeder for Fake Meals (you can as well insert your different meals on the Meal Table). Insert the different allergy on the Allergy table and also insert users on the MealUser Table</p>
 <ul>
@@ -33,3 +33,5 @@ The system recommend meals according to the allergy picked by a user. The meals 
 <img src="image/selected.png">
 </div>
 </ul>
+
+<p>Thanks <b>Eden</b> for this opportunity to work on this task. Really Enjoyed every bit of it </p>
