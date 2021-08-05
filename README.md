@@ -14,7 +14,8 @@ The system recommend meals according to the allergy picked by a user. The meals 
 <p>Laravel was use in this project because is a comprehensive framework suitable for any kind of web development, is logically structured, and enjoys strong community support.</>
 
 <h4>How to use the API</h4>
-<p>Different Endpoint was created for each task</p>
+<p>Different Endpoint was created for each task.</p>
+<p>Start by Migrating Tables to your database and run Seeder for Fake Meals (you can as well insert your different meals by inserting on the Meal Table). Insert the different allergy on the Allergy table and also insert users on the MealUser Table</p>
 <ul>
 <li>Fetch all meals with their Allergy ...</li>
 <div>
