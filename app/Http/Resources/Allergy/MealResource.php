@@ -16,9 +16,9 @@ class MealResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'Main meal' => $this->main_item,
-            'Side meal' => $this->side_item1,
-            'Side meal2' => $this->side_item2
+            'Main' => $this->main_item,
+            'Side1' => $this->side_item1,
+            'Side2' => $this->side_item2
         ];
     }
 }

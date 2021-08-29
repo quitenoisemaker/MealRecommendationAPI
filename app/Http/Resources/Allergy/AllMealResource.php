@@ -20,9 +20,9 @@ class AllMealResource extends JsonResource
         $id = $this->allergies_id;
         return [
             'Allergy' => Meal::find($id)->allergy->name,
-            'Main Meal' => $this->main_item,
-            'Side Meal 1' => $this->side_item1,
-            'Side Meal 2' => $this->side_item2,
+            'Main' => $this->main_item,
+            'Side1' => $this->side_item1,
+            'Side2' => $this->side_item2,
 
         ];
     }
